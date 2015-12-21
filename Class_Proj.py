@@ -25,13 +25,13 @@ def promptBeginAdventure():
 	return get_input()
 
 def promptSelectRoad():
-	print "                                                    ##           Lonely Mountain\n\
+	print " \n                                                   ##           Lonely Mountain\n\
                   Trollshaw Forest (5-6)            ###              (21-38)\n\
                    /                 |               ##                 | \n\
                   /   Midgewater     |                #                 |\n \
 Hobbiton*        /   / Marshes |     |          Misty Mountains      Lake-town*\n\
  THE SHIRE      /   /  (12-19) |     |            path ##             /  |\n\
- |     \       Bree*           |     |           (6-13)<---Beorn's   /   |\n\
+ |     \       Brandywine River|     |           (6-13)<---Beorn's   /   |\n\
  | East Road-->(1-4)   Weathertop    |          /      #    House   /    |\n\
  |                  \    (21-31) \   |  Rivendell*     ##       \  /     |\n\
  |   Ferry           \      |     \  | /      \        ##      Mirkwood  |\n\
@@ -61,41 +61,60 @@ Maggot's               \    |                   \   ###        /   |     |\n\
                                           of the Dead ######\n\
                                                           ############## Minas\n\
                                                                          Tirith*"
-	print "You are off on a grand adventure with Gandalf and Frodo! You come to the end of the road. Check the map above to see if you should go North or East" 
+	print "You have joined the grand adventure with Gandalf and Frodo! You come to the end of the road. Check the map above to see if you should go North or East" 
 	print "Enter: 1 - to take the East Road"
 	print "Enter: 2 - to take the North Road"
 	return get_input()
 
 def promptEastRoadBB():	
-		print "You take the East Road and end up at the Brandywine river. Gandalf says you must cross the river\n to get to the Old Forest on the other side. You have 2 options:" 
+		print "You take the East Road and end up at the Brandywine river. Gandalf says you must cross the river\n to get to the Old Forest on the other side to help in your quest to find The Ring. You have 2 options:" 
 		print "Enter: 1 - cross the river by boat" 
 		print "Enter: 2 - cross the river by the old decaying bridge"
 		return get_input()
 	
 def promptNorthOrcs():
 		print "You take the North Road and are attacked by Orcs! You immediately:"
-		print "Enter: 1 - jump into the fray to fight them off and are injured"
+		print "Enter: 1 - jump into the fray to fight them off"
 		print "Enter: 2 -  hide and hope Frodo and Gandalf can handle the murderous Orcs"
 		return get_input()
 
 def promptRescueElevesHurt():
-		print "You wake up in Rivendale, home of the Elves. Gandalf and Frodo are with you.\nThey have healed you and are providing you weapons for your journey"
-		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow."
-		print "Enter: 1 -  to pick the Sword"
-		print "Enter: 2 - to pick the bow and arrow"
+		print "You are gravely injured in the fight and wake up in Rivendale, home of the Elves. Gandalf and Frodo are with you.\nThe Elves have healed you and brought you to Rivendale"
+		print "The Eleves ask to meet and discuss something of grave importance with you, Gandalf and Frodo"
+		print "Enter: 1 -  to meet with the Elves"
+		print "Enter: 2 -  to not meet with the Elves - you already have enough problems with finding the Ring"
 		return get_input()
+
+def prompt_MeetwithElves():
+		print "Gandalf, Frodo and you attend a meeting of the high Elves. They bring forth The Ring and present it to Gandal\nand request that he take if from their lands and destroy it!"
+ 		print "-----"
+ 		print "Congratulations! You have completed your quest! Middle Earth & The Shire are safe!"
+ 		lose()
+
+def prompt_DeclineElves():
+ 	print " You have opted not to meet with the Elves which could have helpd with your quest to find The ring. You have failed Middel Earth and the Shire\n May God Have Mercy On Your Soul"
+	lose()
 
 def promptHideElves():
 		print "YYou hide and hear a great comotion, the Elves have come and are fighting off the orcs!\nThe Elves take you back to Rivendale and give you food and weapons on your journey"
-		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow." 
-		print "Enter: 1 -  to pick the Sword"
-		print "Enter: 2 - to pick the bow and arrow"
+		print "The Eleves ask to meet and discuss something of grave importance with you, Gandalf and Frodo"
+		print "Enter: 1 -  to meet with the Elves"
+		print "Enter: 2 -  to not meet with the Elves - you already have enough problems with finding the Ring"
 		return get_input()
+
+# def prompt_MeetwithElves2():
+# 		print "Gandalf, Frodo and you attend a meeting of the high Elves. They bring forth The Ring and present it to Gandal and\nrequest that he take if from their lands and destroy it!"
+#  		print "Congratulations! You have completed your quest! Middle Earth & The Shire are safe!"
+#  		lose()
+
+#  def prompt_DeclineElves2():
+#  	print " You have opted not to meet with the Elves which could have helpd with your quest to find The Ring. You have failed Middel Earth and the Shire\n May God Have Mercy On Your Soul"
+# 	lose()
 
 def promptRiver_CrossingTrolls():
  		print "You have made it across the rive in the Boat! You enter the Forest. It has grown late and\nyou setup camp for the night Suddenly you are attacked by Trolls! " 
  		print "Enter: 1 - To fight the Trolls"
-		print "Enter: 2 -  hide and hope Frodo and Gandalf can handle the trio of Trolls"
+		print "Enter: 2 -  hide and hope Frodo and Gandalf can handle the Trolls"
  		return get_input()
 
 def prompt_TrollsAttack():
@@ -109,8 +128,9 @@ def prompt_TrollsGandalf():
 		return get_input()
 
 def prompt_darkmagic():
-	print "You follow Gandalf deeper into the forest and he brings you to a hidden Cave. In the cave is all sorts of riches and boxes.\nGandalf walks over to a small box and flips it open\n Its the Ring "
-	print "Congratulations! You have completed your quest! Middle Earth & The Shire are safe!"
+	print "You follow Gandalf deeper into the forest and he brings you to a hidden Cave. In the cave is all sorts of riches and boxes.\nGandalf walks over to a small box and flips it open Its the Ring!!"
+	print "-----"
+	print "Congratulations! You have completed your quest and found The Ring! Middle Earth & The Shire are safe!"
 	win()
 
 def prompt_abandonquest():
@@ -129,7 +149,7 @@ def promptLeaveShire():
 	print "\t\t\t ----------------"
 
 	print "You find yourself in the Shire with Frodo. Frodo has decided to leave\nto go on an Adventure Walk to meet Gandalf"
-	print "Frodo invites you to come on the walk you must decide if you want to go with\nFordo or stay and being boring in the Shire"
+	print "Frodo invites you to come on the walk you must decide if you want to go with\nFrodo or stay and being boring in the Shire"
 	print "Enter: '1' To go with Frodo and have a grand Adventure"
 	print "Enter: '2' To stay in the Shire and have a second breakfast"
 	return get_input()
@@ -158,9 +178,19 @@ if input == 1:
 		else:
 			input = promptNorthOrcs()
 			if input == 1:
-				input == promptRescueElevesHurt()
+				input = promptRescueElevesHurt()
+				if input == 1: 
+					input = prompt_MeetwithElves()
+				else:
+					input = prompt_DeclineElves()
+
 			else:
 				input = promptHideElves()
+				if input == 1:
+					input == prompt_MeetwithElves()
+
+				else:
+					input = prompt_DeclineElves()
 	else:
 		print "Sorry! The Shire is in trouble you are going on an Adventure!"
 		input = promptSelectRoad()
