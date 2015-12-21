@@ -61,7 +61,6 @@ Maggot's               \    |                   \   ###        /   |     |\n\
                                           of the Dead ######\n\
                                                           ############## Minas\n\
                                                                          Tirith*"
-	print "Sorry! The Shire is in trouble you are going on an Adventure!"
 	print "You are off on a grand adventure with Gandalf and Frodo! You come to the end of the road. Check the map above to see if you should go North or East" 
 	print "Enter: 1 - to take the East Road"
 	print "Enter: 2 - to take the North Road"
@@ -81,12 +80,16 @@ def promptNorthOrcs():
 
 def promptRescueElevesHurt():
 		print "You wake up in Rivendale, home of the Elves. Gandalf and Frodo are with you.\nThey have healed you and are providing you weapons for your journey"
-		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow. Select '1' for Sword or '2' for bow and arrow?"
+		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow."
+		print "Enter: 1 -  to pick the Sword"
+		print "Enter: 2 - to pick the bow and arrow"
 		return get_input()
 
 def promptHideElves():
 		print "YYou hide and hear a great comotion, the Elves have come and are fighting off the orcs!\nThe Elves take you back to Rivendale and give you food and weapons on your journey"
-		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow. Select '1' for Sword or '2' for bow and arrow?"
+		print "To protect you on your journey the Elves present you with two options:\nsword or bow & arrow." 
+		print "Enter: 1 -  to pick the Sword"
+		print "Enter: 2 - to pick the bow and arrow"
 		return get_input()
 
 def promptRiver_CrossingTrolls():
@@ -159,9 +162,10 @@ if input == 1:
 			else:
 				input = promptHideElves()
 	else:
+		print "Sorry! The Shire is in trouble you are going on an Adventure!"
 		input = promptSelectRoad()
 else:
-	print "The Shire is in trouble and you have failed them!"
+	print "You stay for a Second breakfast and live a boring life - Good Bye!"
 	lose()
 
 sys.exit(0)
